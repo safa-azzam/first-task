@@ -1,0 +1,39 @@
+let numbers = [5,8,0,1,9,11,15,16];
+console.log("Original numbers list: ", numbers)
+
+let ordaring = [...numbers] // making a copy of numbers array witout changing it value 
+
+
+for(let i = 0 ; i < ordaring.length ; i++)
+{
+    for(let j = 0 ; j < ordaring.length - 1 ; j++)
+    {
+        if(ordaring[j] > ordaring[j + 1])  // comparing each number(j) with the net number (j+1)
+        {   
+            let temp = ordaring[j];
+            ordaring[j] = ordaring[j + 1]
+            ordaring[j + 1] = temp;
+        }
+    }
+}
+console.log("Numbers list After sorting:",ordaring)// printing the new array
+console.log("the original array is: ",numbers) //printing the old array to check it didnt change
+let disorder =[...numbers] // making a copy of numbers array witout changing it value 
+
+
+for(let i = 0 ; i < disorder.length ; i++)
+{
+    for(let j = 0 ; j < disorder.length - 1 ; j++)
+    {
+        if(disorder[j] < disorder[j + 1])
+        {
+            let temp = disorder[j];
+            disorder[j] = disorder[j + 1]
+            disorder[j + 1] = temp;
+        }
+    }
+}
+
+console.log("Numbers list After Desc sorting is :",disorder) // printing the new array
+console.log("the original array is : ",numbers) //printing the old array to check it didnt change
+
